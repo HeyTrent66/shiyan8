@@ -1,0 +1,283 @@
+/* 基础样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f0f0;
+}
+
+/* 登录页面样式 */
+.login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* 个人资料页面样式 */
+.profile-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.scores-container {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* 游戏页面样式 */
+.game-container {
+    width: 480px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header {
+    padding: 10px;
+    background: #333;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.logout-link {
+    color: #ff4444;
+}
+
+.username {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.button:hover {
+    background: #45a049;
+}
+
+/* 游戏欢迎页面样式 */
+.game-welcome {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.game-welcome h1 {
+    color: #333;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+/* 排行榜样式 */
+.leaderboard {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+}
+
+.leaderboard h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.leaderboard table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.leaderboard th {
+    background: #f5f5f5;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.leaderboard td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.leaderboard tr:nth-child(1) td {
+    color: #FFD700; /* 金色 */
+    font-weight: bold;
+}
+
+.leaderboard tr:nth-child(2) td {
+    color: #C0C0C0; /* 银色 */
+}
+
+.leaderboard tr:nth-child(3) td {
+    color: #CD7F32; /* 铜色 */
+}
+
+/* 按钮样式美化 */
+button {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+/* 链接样式 */
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 错误消息样式 */
+.error-message {
+    background: #ffebee;
+    color: #c62828;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* 个人资料页面增强样式 */
+.score-section {
+    margin-bottom: 30px;
+}
+
+.score-section h3 {
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+}
+
+.best-score {
+    font-size: 24px;
+    color: #4CAF50;
+    text-align: center;
+    padding: 20px;
+    background: #f5f5f5;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.score-number {
+    font-weight: bold;
+    font-size: 36px;
+    display: block;
+}
+
+.score-date {
+    font-size: 14px;
+    color: #666;
+    display: block;
+    margin-top: 5px;
+}
+
+.no-score {
+    color: #999;
+    font-style: italic;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.button-secondary {
+    background: #f44336;
+}
+
+.button-secondary:hover {
+    background: #d32f2f;
+}
+
+/* 表格样式增强 */
+.scores-container table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.scores-container th {
+    background: #f5f5f5;
+    padding: 12px;
+    font-weight: bold;
+    text-align: left;
+    border-bottom: 2px solid #4CAF50;
+}
+
+.scores-container td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.scores-container tr:hover {
+    background: #f9f9f9;
+} 

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>个人资料</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="profile-container">
+        <h2>欢迎, {{ user.username }}!</h2>
+        
+        <div class="scores-container">
+            <div class="score-section">
+                <h3>历史最高分</h3>
+                <div class="best-score">
+                    {% if scores %}
+                    <span class="score-number">{{ scores[0].score }}</span>
+                    <span class="score-date">{{ scores[0].date.strftime('%Y-%m-%d %H:%M') }}</span>
+                    {% else %}
+                    <span class="no-score">暂无游戏记录</span>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="score-section">
+                <h3>游戏记录</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>得分</th>
+                            <th>日期</th>
+                            <th>用时</th>
+                            <th>剩余生命</th>
+                            <th>排名</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for score in scores %}
+                        <tr>
+                            <td>{{ score.score }}</td>
+                            <td>{{ score.date.strftime('%Y-%m-%d %H:%M') }}</td>
+                            <td>{{ score.duration }}秒</td>
+                            <td>{{ score.lives if score.lives is not none else 0 }}条</td>
+                            <td>第{{ loop.index }}名</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="profile-actions">
+            <a href="{{ url_for('index') }}" class="button">开始游戏</a>
+            <a href="{{ url_for('logout') }}" class="button button-secondary">退出登录</a>
+        </div>
+    </div>
+</body>
+</html> 

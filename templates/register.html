@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>打砖块游戏 - 注册</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="game-welcome">
+        <h1>打砖块游戏</h1>
+        
+        <div class="leaderboard">
+            <h2>排行榜</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>排名</th>
+                        <th>玩家</th>
+                        <th>最高分</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for score in top_scores %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td>{{ score.username }}</td>
+                        <td>{{ score.score }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="login-container">
+            <h2>用户注册</h2>
+            {% if error %}
+            <div class="error-message">{{ error }}</div>
+            {% endif %}
+            <form method="POST" action="{{ url_for('register') }}">
+                <div class="form-group">
+                    <label>用户名:</label>
+                    <input type="text" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label>密码:</label>
+                    <input type="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label>确认密码:</label>
+                    <input type="password" name="confirm_password" required>
+                </div>
+                <button type="submit">注册</button>
+            </form>
+            <p>已有账号? <a href="{{ url_for('login') }}">立即登录</a></p>
+        </div>
+    </div>
+</body>
+</html> 
